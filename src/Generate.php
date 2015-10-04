@@ -13,7 +13,7 @@ class Generate
         $this->markdown = $markdown;
     }
 
-    public function  getStatic()
+    public function  makeStatic()
     {
         return $this->staticTemplate($this->yaml, $this->markdown);
     }

@@ -10,7 +10,7 @@ Discharge implementation -
 
 Generate implementation -
 ```php
-    $file = Jeremytubbs\VanDeGraaff\Generate($array, $markdown);
-    $static = $file->getStatic();
+    $generator = Jeremytubbs\VanDeGraaff\Generate($array, $markdown);
+    $static = $generator->makeStatic();
     file_put_contents('path/static.md', $static);
 ```
