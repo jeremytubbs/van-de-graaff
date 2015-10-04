@@ -41,8 +41,9 @@ class Discharge
     {
         if (count($this->matches) == 4) {
             $config = Yaml::parse($this->matches[2]);
-            $content = (new Parsedown)->text($this->matches[3]);
-            return ['config' => $config, 'content' => $content];
+            $content = ['content' => (new Parsedown)->text($this->matches[3])];
+            $output = array_merge($config, $content);
+            return $output;
         }
         throw new Exception("File is not properly formated.");
     }
