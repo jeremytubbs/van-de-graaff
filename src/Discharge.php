@@ -1,12 +1,12 @@
 <?php
 
-namespace Jeremytubbs\ParseStatic;
+namespace Jeremytubbs\VanDeGraaff;
 
 use Exception;
 use Symfony\Component\Yaml\Yaml;
 use Parsedown;
 
-class File
+class Discharge
 {
     /**
      * Regex for seperators
@@ -14,9 +14,9 @@ class File
      */
     private static $matcherRegex = "/^-{3}\s?(\w*)\r?\n(.*)\r?\n-{3}\r?\n(.*)/s";
 
-    public function __construct($input)
+    public function __construct($file)
     {
-        preg_match(self::$matcherRegex, $input, $matches);
+        preg_match(self::$matcherRegex, $file, $matches);
         $this->matches = $matches;
     }
 
@@ -36,5 +36,14 @@ class File
         }
         throw new Exception("File is not properly formated.");
     }
-}
 
+    public function getOutput()
+    {
+        if (count($this->matches) == 4) {
+            $config = Yaml::parse($this->matches[2]);
+            $content = (new Parsedown)->text($this->matches[3]);
+            return ['config' => $config, 'content' => $content];
+        }
+        throw new Exception("File is not properly formated.");
+    }
+}

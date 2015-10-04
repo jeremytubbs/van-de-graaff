@@ -1,8 +1,8 @@
 {
-    "name": "jeremytubbs/parse-static",
+    "name": "jeremytubbs/van-de-graaff",
     "autoload": {
         "psr-4": {
-            "Jeremytubbs\\ParseStatic\\": "src/"
+            "Jeremytubbs\\VanDeGraaff\\": "src/"
         }
     },
     "require": {
