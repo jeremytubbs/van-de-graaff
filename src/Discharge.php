@@ -47,4 +47,9 @@ class Discharge
         }
         throw new Exception("File is not properly formated.");
     }
+
+    public function getMarkdown()
+    {
+        return $this->matches[3];
+    }
 }
