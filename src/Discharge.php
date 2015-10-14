@@ -4,7 +4,7 @@ namespace Jeremytubbs\VanDeGraaff;
 
 use Exception;
 use Symfony\Component\Yaml\Yaml;
-use Parsedown;
+use ParsedownExtra as Parsedown;
 
 class Discharge
 {

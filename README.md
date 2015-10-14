@@ -6,6 +6,7 @@ Discharge implementation -
     $config = $file->getConfig();
     $content = $file->getContent();
     $output = $file->getOutput();
+    $markdown = $file->getMarkdown();
 ```
 
 Generate implementation -
