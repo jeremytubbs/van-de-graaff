@@ -20,7 +20,7 @@ class Discharge
         $this->matches = $matches;
     }
 
-    public function getConfig()
+    public function getFrontmatter()
     {
         if (count($this->matches) == 4) {
             return Yaml::parse($this->matches[2]);
