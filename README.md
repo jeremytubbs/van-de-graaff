@@ -3,10 +3,10 @@
 Discharge implementation -
 ```php
     $file = Jeremytubbs\VanDeGraaff\Discharge(file_get_contents('path/to/file.md'));
-    $config = $file->getConfig();
-    $content = $file->getContent();
-    $output = $file->getOutput();
-    $markdown = $file->getMarkdown();
+    $frontmatter = $file->getFrontmatter(); // returns frontmatter array
+    $content = $file->getContent(); // returns HTML content
+    $output = $file->getOutput(); // returns both frontmatter array and HTML content
+    $markdown = $file->getMarkdown(); // returns content as markdown
 ```
 
 Generate implementation -
