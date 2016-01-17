@@ -8,9 +8,9 @@
         }
     ],
     "require": {
-        "symfony/yaml": "^2.7",
-        "erusev/parsedown": "^1.5",
-        "erusev/parsedown-extra": "^0.7.0"
+        "symfony/yaml": "^3.0",
+        "erusev/parsedown": "^1.6",
+        "erusev/parsedown-extra": "^0.7"
     },
     "autoload": {
         "psr-4": {
