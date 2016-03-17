@@ -9,7 +9,7 @@ class Generate
 {
     public function __construct($array, $markdown)
     {
-        $this->yaml = Yaml::dump($array, 2);
+        $this->yaml = Yaml::dump($array, 3);
         $this->markdown = $markdown;
     }
 
